@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Q4 Earnings – Interactive Deck</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- Reveal.js core styles -->
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
+    <!-- Theme -->
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" id="theme" />
+
+    <!-- Code syntax highlighting theme -->
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/plugin/highlight/monokai.css" />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Title slide -->
+        <section>
+          <h2>Q4 Earnings Report</h2>
+          <h3>Interactive Technical Overview</h3>
+          <p>Technical Consultant – Major Financial Institution</p>
+          <p>
+            Contact:
+            <a href="mailto:24f1002273@ds.study.iitm.ac.in">
+              24f1002273@ds.study.iitm.ac.in
+            </a>
+          </p>
+
+          <aside class="notes">
+            Welcome everyone. This deck demonstrates a modern, interactive presentation for our
+            quarterly earnings, built with RevealJS and suitable for GitHub Pages deployment.
+          </aside>
+        </section>
+
+        <!-- Markdown slide (REQUIRED) -->
+        <section data-markdown>
+          <textarea data-template>
+## Revenue Highlights (Markdown Slide)
+
+- **Total Revenue (Q4 2025):** \$1.24B  
+- **Year-on-Year Growth:** `+8.5%`  
+- **Net Interest Income:** \$720M  
+- **Fee-based Income:** \$310M  
+
+---
+
+### Commentary
+
+- Growth driven primarily by **retail lending** and **transaction banking**
+- **Stable NIM** despite rate volatility
+- Improved **asset quality** with lower provisioning
+
+Notes:
+
+- Use this slide to talk through top-line performance.
+- Emphasize diversified revenue streams and risk discipline.
+          </textarea>
+        </section>
+
+        <!-- Fragments / animated elements (REQUIRED) -->
+        <section>
+          <h2>Key Performance Drivers</h2>
+          <ul>
+            <li class="fragment fade-in">
+              Retail lending growth of <strong>12%</strong> YoY
+            </li>
+            <li class="fragment fade-in">
+              Digital channel adoption at <strong>78%</strong> of total transactions
+            </li>
+            <li class="fragment fade-in">
+              Cost-to-income ratio improved by <strong>120 bps</strong>
+            </li>
+            <li class="fragment fade-in">
+              Higher cross-sell on wealth and insurance products
+            </li>
+          </ul>
+
+          <aside class="notes">
+            Advance through the bullet points using fragments to keep the audience focused
+            on one message at a time. Link each driver back to strategic initiatives.
+          </aside>
+        </section>
+
+        <!-- Code sample with syntax highlighting (REQUIRED) -->
+        <section>
+          <h2>Example: NPV Calculation Service</h2>
+          <p>
+            Internal analytics microservice used for project and portfolio evaluation:
+          </p>
+          <pre><code class="language-python">
+def npv(rate, cash_flows):
+    """
+    Simple NPV calculation.
+    :param rate: discount rate as decimal (e.g. 0.08)
+    :param cash_flows: list of cash flows (CF_0, CF_1, ..., CF_T)
+    """
+    return sum(cf / (1 + rate) ** t for t, cf in enumerate(cash_flows))
+
+
+if __name__ == "__main__":
+    discount_rate = 0.08
+    projected_flows = [-1_000_000, 350_000, 420_000, 510_000]
+    print(f"NPV = {npv(discount_rate, projected_flows):,.2f}")
+          </code></pre>
+
+          <aside class="notes">
+            Use this slide to illustrate how finance and engineering intersect.
+            Mention that services like this are packaged as APIs and consumed by
+            internal tools for scenario analysis and credit decisioning.
+          </aside>
+        </section>
+
+        <!-- Mathematical equations / financial formulas (REQUIRED) -->
+        <section>
+          <h2>Core Financial Metrics</h2>
+
+          <p>Net Present Value (NPV):</p>
+          <p>
+            \[
+            \text{NPV} = \sum_{t=0}^{T} \frac{CF_t}{(1 + r)^t}
+            \]
+          </p>
+
+          <p>Return on Equity (ROE):</p>
+          <p>
+            \[
+            \text{ROE} = \frac{\text{Net Income}}{\text{Shareholders' Equity}}
+            \]
+          </p>
+
+          <p>Cost-to-Income Ratio (CIR):</p>
+          <p>
+            \[
+            \text{CIR} = \frac{\text{Operating Expenses}}{\text{Operating Income}}
+            \]
+          </p>
+
+          <aside class="notes">
+            Briefly define each metric:
+            NPV for investment decisions, ROE for shareholder returns,
+            and CIR for operational efficiency. Tie back to the quarter's numbers.
+          </aside>
+        </section>
+
+        <!-- Closing / call-to-action slide with fragments & notes -->
+        <section>
+          <h2>Next Steps</h2>
+          <ol>
+            <li class="fragment fade-in">Review business-unit level dashboards</li>
+            <li class="fragment fade-in">Validate assumptions in stress-test scenarios</li>
+            <li class="fragment fade-in">
+              Prioritize technology investments for further margin expansion
+            </li>
+          </ol>
+
+          <p class="fragment fade-in">
+            Questions? Reach me at
+            <strong>24f1002273@ds.study.iitm.ac.in</strong>
+          </p>
+
+          <aside class="notes">
+            Wrap up by reiterating key themes: profitable growth, digital adoption,
+            and disciplined risk management. Invite questions and direct stakeholders
+            to follow-up materials on the internal portal.
+          </aside>
+        </section>
+      </div>
+    </div>
+
+    <!-- Reveal.js core -->
+    <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+
+    <!-- Plugins: Markdown, Highlight, Math, Notes -->
+    <script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="https://unpkg.com/reveal.js/plugin/math/math.js"></script>
+    <script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+
+    <script>
+      Reveal.initialize({
+        hash: true,
+        slideNumber: "c/t",
+
+        // Math (MathJax)
+        math: {
+          mathjax: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js",
+          config: "TeX-AMS_HTML-full"
+        },
+
+        plugins: [RevealMarkdown, RevealHighlight, RevealMath, RevealNotes]
+      });
+    </script>
+  </body>
+</html>
