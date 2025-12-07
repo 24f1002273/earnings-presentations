@@ -1,156 +1,268 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Q4 Earnings – Interactive Deck</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-
-    <!-- Reveal.js core styles -->
-    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
-    <!-- Theme -->
-    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" id="theme" />
-
-    <!-- Code syntax highlighting theme -->
-    <link rel="stylesheet" href="https://unpkg.com/reveal.js/plugin/highlight/monokai.css" />
-  </head>
-
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 Earnings Report</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .reveal pre {
+            width: 100%;
+            font-size: 0.55em;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        .reveal code {
+            padding: 2px 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+        .contact-info {
+            margin-top: 2em;
+            font-size: 1.2em;
+            color: #42affa;
+        }
+        .metric {
+            background: rgba(66, 175, 250, 0.1);
+            padding: 20px;
+            margin: 10px;
+            border-left: 4px solid #42affa;
+            border-radius: 4px;
+        }
+        .formula-box {
+            background: rgba(100, 200, 100, 0.1);
+            padding: 20px;
+            border: 2px solid #64c864;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
     <div class="reveal">
-      <div class="slides">
+        <div class="slides">
+            <!-- Title Slide -->
+            <section>
+                <h1>Q4 Financial Performance</h1>
+                <h3>Quarterly Earnings Report</h3>
+                <p style="margin-top: 2em; color: #999;">Presented to Stakeholders</p>
+                <div class="contact-info">
+                    <p>For inquiries: <strong>24f1002273@ds.study.iitm.ac.in</strong></p>
+                </div>
+                <aside class="notes">
+                    Welcome to Q4 earnings presentation. This will cover our financial performance, key metrics, and strategic initiatives. We'll walk through revenue analysis, profitability measures, and forward-looking statements.
+                </aside>
+            </section>
 
-        <!-- Title slide WITH EMAIL (required) -->
-        <section>
-          <h2>Q4 Earnings Report</h2>
-          <h3>Interactive Technical Overview</h3>
+            <!-- Executive Summary (Markdown Slide) -->
+            <section data-markdown>
+                <textarea data-template>
+                    ## Executive Summary
 
-          <!-- Email added clearly so the checker detects it -->
-          <p><strong>Email: 24f1002273@ds.study.iitm.ac.in</strong></p>
+                    ### Key Highlights
 
-          <aside class="notes">
-            Welcome everyone. This deck demonstrates a modern interactive earnings presentation.
-          </aside>
-        </section>
+                    - **Revenue Growth**: 15% YoY increase to $2.5B
+                    - **Operating Margin**: Improved to 22% from 19% last year
+                    - **EPS**: $3.47 per share, up 18% YoY
+                    - **Cash Position**: Strong with $1.2B in reserves
 
-        <!-- Markdown slide -->
-        <section data-markdown>
-          <textarea data-template>
-## Revenue Highlights (Markdown Slide)
+                    ### Strategic Achievements
 
-- **Total Revenue:** \$1.24B  
-- **YoY Growth:** `+8.5%`  
-- **Net Interest Income:** \$720M  
-- **Fee-based Income:** \$310M  
+                    1. Successful market expansion in APAC region
+                    2. Enhanced digital platform capabilities
+                    3. Improved operational efficiency
+                    4. Expanded customer base by 32%
 
----
+                    ---
+                    
+                    *Note: All figures are preliminary and subject to audit verification*
+                </textarea>
+                <aside class="notes">
+                    This executive summary provides the high-level overview of our performance. The 15% revenue growth demonstrates solid market demand. Our margin improvement shows operational discipline. The EPS growth exceeds revenue growth due to share buyback program and operational leverage.
+                </aside>
+            </section>
 
-### Commentary
-- Growth driven by retail lending  
-- Digital channel adoption rose to 78%  
-- Improved asset quality  
+            <!-- Revenue Analysis with Fragments -->
+            <section>
+                <h2>Revenue Analysis</h2>
+                <div class="metric" style="margin-top: 1em;">
+                    <h4>Q4 Total Revenue: <span style="color: #42affa;">$2.5B</span></h4>
+                    <p style="color: #999; margin: 0;">+15% Year-over-Year Growth</p>
+                </div>
 
-Notes:  
-Explain key growth drivers and risk discipline.
-          </textarea>
-        </section>
+                <p style="margin-top: 2em; text-align: left; font-size: 0.9em;">Revenue breakdown by segment:</p>
+                <div class="fragment">
+                    <p><strong>Banking Services:</strong> $1.2B (48%)</p>
+                </div>
+                <div class="fragment">
+                    <p><strong>Investment Management:</strong> $0.8B (32%)</p>
+                </div>
+                <div class="fragment">
+                    <p><strong>Wealth Management:</strong> $0.5B (20%)</p>
+                </div>
 
-        <!-- Fragments slide -->
-        <section>
-          <h2>Key Performance Drivers</h2>
-          <ul>
-            <li class="fragment fade-in">Retail lending growth of <strong>12%</strong> YoY</li>
-            <li class="fragment fade-in">Digital channel adoption at <strong>78%</strong></li>
-            <li class="fragment fade-in">Cost-to-income ratio improved by <strong>120 bps</strong></li>
-            <li class="fragment fade-in">Higher cross-sell across wealth products</li>
-          </ul>
+                <aside class="notes">
+                    Our revenue is well-diversified across three main segments. Banking Services remains our largest contributor. The growth across all segments indicates balanced business performance and reduced concentration risk.
+                </aside>
+            </section>
 
-          <aside class="notes">
-            Present each point one by one using fragments.
-          </aside>
-        </section>
+            <!-- Profitability Metrics -->
+            <section>
+                <h2>Profitability Metrics</h2>
+                <div class="formula-box">
+                    <h4>Operating Margin Formula</h4>
+                    <p style="text-align: center; margin: 1em 0;">
+                        $$\text{Operating Margin} = \frac{\text{Operating Income}}{\text{Total Revenue}} \times 100\%$$
+                    </p>
+                    <p style="text-align: center; color: #64c864;">
+                        $$= \frac{550M}{2,500M} \times 100\% = 22\%$$
+                    </p>
+                </div>
 
-        <!-- Code highlighting slide -->
-        <section>
-          <h2>NPV Calculation Service</h2>
-          <pre><code class="language-python">
-def npv(rate, cash_flows):
+                <p style="margin-top: 1.5em;"><strong>ROE Calculation:</strong></p>
+                <div class="formula-box" style="border-color: #f97316; background: rgba(249, 115, 22, 0.1);">
+                    $$\text{ROE} = \frac{\text{Net Income}}{\text{Shareholders' Equity}} = \frac{418M}{8,500M} = 4.92\%$$
+                </div>
+
+                <aside class="notes">
+                    The 22% operating margin reflects strong cost management and operational efficiency. Our ROE of 4.92% is competitive in the financial services industry. The improvement from 19% to 22% margin demonstrates the effectiveness of our cost optimization initiatives.
+                </aside>
+            </section>
+
+            <!-- Code Sample: Financial Model -->
+            <section>
+                <h2>Financial Model Implementation</h2>
+                <p style="font-size: 0.8em; text-align: left; margin-bottom: 1em;">Python code for earnings per share calculation:</p>
+                <pre><code class="language-python" style="max-height: 400px;">def calculate_eps(net_income, shares_outstanding):
     """
-    Simple NPV calculation.
+    Calculate Earnings Per Share
+    
+    Args:
+        net_income: Net income in millions
+        shares_outstanding: Shares outstanding in millions
+    
+    Returns:
+        float: EPS value
     """
-    return sum(cf / (1 + rate) ** t for t, cf in enumerate(cash_flows))
+    eps = net_income / shares_outstanding
+    return round(eps, 2)
 
-discount_rate = 0.08
-flows = [-1_000_000, 350_000, 420_000, 510_000]
-print(npv(discount_rate, flows))
-          </code></pre>
+# Q4 Financial Data
+net_income = 418  # million
+shares_outstanding = 120.5  # million
+diluted_shares = 124.2  # million
 
-          <aside class="notes">
-            Show how internal financial models are implemented in code.
-          </aside>
-        </section>
+basic_eps = calculate_eps(net_income, shares_outstanding)
+diluted_eps = calculate_eps(net_income, diluted_shares)
 
-        <!-- Math slide -->
-        <section>
-          <h2>Financial Metrics</h2>
+print(f"Basic EPS: ${basic_eps}")
+print(f"Diluted EPS: ${diluted_eps}")</code></pre>
 
-          <p>NPV:</p>
-          <p>
-            \[
-              \text{NPV} = \sum_{t=0}^{T} \frac{CF_t}{(1+r)^t}
-            \]
-          </p>
+                <aside class="notes">
+                    This code demonstrates our EPS calculation methodology. We compute both basic and diluted EPS to provide complete transparency. The diluted EPS accounts for stock options and convertible securities.
+                </aside>
+            </section>
 
-          <p>ROE:</p>
-          <p>
-            \[
-              \text{ROE} = \frac{\text{Net Income}}{\text{Equity}}
-            \]
-          </p>
+            <!-- Risk Factors -->
+            <section>
+                <h2>Risk Assessment</h2>
+                <p style="text-align: left; margin-bottom: 1.5em;">Key risks and mitigation strategies:</p>
+                
+                <div class="fragment metric" style="text-align: left; margin-bottom: 1em;">
+                    <strong>Market Risk</strong>
+                    <p style="margin: 0.5em 0 0 0; color: #ccc;">Mitigation: Diversified portfolio and hedging strategies</p>
+                </div>
 
-          <aside class="notes">
-            Define each formula and relate it to quarterly performance.
-          </aside>
-        </section>
+                <div class="fragment metric" style="text-align: left; margin-bottom: 1em;">
+                    <strong>Regulatory Risk</strong>
+                    <p style="margin: 0.5em 0 0 0; color: #ccc;">Mitigation: Proactive compliance framework and regulatory monitoring</p>
+                </div>
 
-        <!-- Closing slide WITH EMAIL (second mention is fine) -->
-        <section>
-          <h2>Next Steps</h2>
-          <ul>
-            <li class="fragment fade-in">Review business-unit dashboards</li>
-            <li class="fragment fade-in">Validate stress-test assumptions</li>
-            <li class="fragment fade-in">Prioritize tech investments</li>
-          </ul>
+                <div class="fragment metric" style="text-align: left; margin-bottom: 1em;">
+                    <strong>Operational Risk</strong>
+                    <p style="margin: 0.5em 0 0 0; color: #ccc;">Mitigation: Robust systems, redundancy, and disaster recovery plans</p>
+                </div>
 
-          <p class="fragment fade-in">
-            Contact: <strong>24f1002273@ds.study.iitm.ac.in</strong>
-          </p>
+                <div class="fragment metric" style="text-align: left;">
+                    <strong>Credit Risk</strong>
+                    <p style="margin: 0.5em 0 0 0; color: #ccc;">Mitigation: Rigorous underwriting and continuous portfolio monitoring</p>
+                </div>
 
-          <aside class="notes">
-            Conclude and open for questions.
-          </aside>
-        </section>
-      </div>
+                <aside class="notes">
+                    We maintain a comprehensive risk management framework. Market risk is managed through diversification and derivatives. Our compliance team ensures regulatory adherence across all jurisdictions. Operational resilience is achieved through redundant systems and regular stress testing. Credit risk management includes scenario analysis and early warning systems.
+                </aside>
+            </section>
+
+            <!-- Future Outlook -->
+            <section>
+                <h2>Forward Guidance</h2>
+                <p style="margin-bottom: 1.5em;">Expected performance for Q1 2025:</p>
+                
+                <div class="metric">
+                    <p><strong>Revenue Guidance:</strong> <span style="color: #42affa;">$2.6B - $2.7B</span></p>
+                    <p style="color: #999; margin: 0.5em 0 0 0; font-size: 0.9em;">+4% to +8% QoQ growth</p>
+                </div>
+
+                <div class="metric" style="margin-top: 1em;">
+                    <p><strong>Operating Margin:</strong> <span style="color: #42affa;">21% - 23%</span></p>
+                    <p style="color: #999; margin: 0.5em 0 0 0; font-size: 0.9em;">Steady operational performance</p>
+                </div>
+
+                <div class="metric" style="margin-top: 1em;">
+                    <p><strong>Strategic Initiatives:</strong></p>
+                    <ul style="margin: 0.5em 0 0 1.5em; font-size: 0.9em;">
+                        <li>Cloud infrastructure migration (40% complete)</li>
+                        <li>AI-driven analytics platform deployment</li>
+                        <li>Customer experience enhancement programs</li>
+                    </ul>
+                </div>
+
+                <aside class="notes">
+                    Our forward guidance reflects continued momentum with modest organic growth. We're investing significantly in technology infrastructure which may moderately pressure margins short-term but will drive long-term efficiency. The migration to cloud reduces operational costs while improving scalability.
+                </aside>
+            </section>
+
+            <!-- Thank You Slide -->
+            <section>
+                <h1>Thank You</h1>
+                <h3>Questions & Discussion</h3>
+                <div class="contact-info" style="margin-top: 3em;">
+                    <p><strong>Contact Information:</strong></p>
+                    <p style="font-size: 1.1em; margin: 1em 0;">24f1002273@ds.study.iitm.ac.in</p>
+                    <p style="color: #999; font-size: 0.9em; margin-top: 1.5em;">
+                        This presentation contains forward-looking statements subject to risks and uncertainties.
+                    </p>
+                </div>
+
+                <aside class="notes">
+                    Thank you for your attention. We're confident in our strategic direction and execution capability. The team remains focused on delivering shareholder value through disciplined capital allocation and operational excellence. I'm happy to address any questions you may have.
+                </aside>
+            </section>
+        </div>
     </div>
 
-    <!-- Reveal.js core -->
-    <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
-
-    <!-- Plugins -->
-    <script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
-    <script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
-    <script src="https://unpkg.com/reveal.js/plugin/math/math.js"></script>
-    <script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
-
     <script>
-      Reveal.initialize({
-        hash: true,
-        slideNumber: "c/t",
-        math: {
-          mathjax: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js",
-          config: "TeX-AMS_HTML-full"
-        },
-        plugins: [RevealMarkdown, RevealHighlight, RevealMath, RevealNotes]
-      });
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            transitionSpeed: 'default',
+            center: true,
+            progress: true,
+            history: true,
+            keyboard: true,
+            overview: true,
+            touch: true,
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+        });
     </script>
-  </body>
+</body>
 </html>
